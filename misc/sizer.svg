@@ -1,0 +1,22 @@
+<svg viewBox="-900 -900 1800 1800" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!--
+Sizes:
+    - 15x20
+    - 20x30
+    - 25x35
+    - 30x40
+-->
+
+    <defs>
+        <rect id="contentsize" x="-150" y="-200" width="300" height="400" fill="rgba(255,99,99,0.2)" stroke="none" />
+    </defs>
+    <rect x="-150" y="-200" width="300" height="400" fill="none" stroke="black" stroke-width="4" />
+    <rect x="-200" y="-300" width="400" height="600" fill="none" stroke="black" stroke-width="4" />
+    <rect x="-250" y="-350" width="500" height="700" fill="none" stroke="black" stroke-width="4" />
+    <rect x="-300" y="-400" width="600" height="800" fill="none" stroke="black" stroke-width="4" />
+
+    
+    <use href="#contentsize" transform="scale(0.83)" />
+    <use href="#contentsize" transform="scale(1.2)" />
+    <use href="#contentsize" transform="scale(1.44)" />
+</svg>
