@@ -10,8 +10,9 @@ function make_final_stamp() {
     magick convert -verbose "$output_png" misc/punchmask-30x40.png -compose CopyOpacity -composite "$output_png"
 }
 
-
-
+mkdir -p _dist/
+rsync -av src/ _dist/src/
+rsync -av misc/ _dist/misc/
 
 case $1 in
     src/*/)
@@ -25,9 +26,7 @@ case $1 in
             bash "$1/frame.sh"
         fi
         make_final_stamp "$proj_id"
-        # [[ -e "$texpath" ]] && command -v ntex && ntex "$texpath"
-        rsync -av src/ _dist/src/
-        rsync -av misc/ _dist/misc/
+        [[ -e "$texpath" ]] && command -v ntex && ntex "$texpath"
         ;;
 esac
 
