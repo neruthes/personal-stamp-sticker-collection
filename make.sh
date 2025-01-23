@@ -1,11 +1,14 @@
 #!/bin/bash
 
+# Initialize 'config.sh' variables
+rz_hover_path=misc/deco-star1-gold.png
+
 function make_final_stamp() {
     proj_id="$1"
     [[ "$is_landscape" == y ]] && rotate=y
     output_png="src/$proj_id/frame/$proj_id.out_rz.png"
     rotate="$rotate" bash utils/rouzao-30x40.sh  "src/$proj_id/frame/$proj_id.30x40.png"
-    magick composite misc/deco-star1-gold.png misc/rouzao-30x40.png "$output_png"
+    magick composite "$rz_hover_path" .tmp/rouzao-30x40.png "$output_png"
     magick "$output_png" -crop 2400x3200+100+100 "$output_png"
     magick convert -verbose "$output_png" misc/punchmask-30x40.png -compose CopyOpacity -composite "$output_png"
 }
