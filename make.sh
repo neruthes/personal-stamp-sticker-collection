@@ -10,7 +10,7 @@ function make_final_stamp() {
     rotate="$rotate" bash utils/rouzao-30x40.sh  "src/$proj_id/frame/$proj_id.30x40.png"
     magick composite "$rz_hover_path" .tmp/rouzao-30x40.png "$output_png"
     magick "$output_png" -crop 2400x3200+100+100 "$output_png"
-    magick convert -verbose "$output_png" misc/punchmask-30x40.png -compose CopyOpacity -composite "$output_png"
+    magick -verbose "$output_png" misc/punchmask-30x40.png -compose CopyOpacity -composite "$output_png"
 }
 
 mkdir -p _dist/

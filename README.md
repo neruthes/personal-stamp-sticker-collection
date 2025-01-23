@@ -33,3 +33,27 @@ This project uses portable aspect ratio for compatibility with the following dim
 - Padding = 2.5mm
 - Content = 25x35 mm (2000x2800 px)
 - Border = 200 px
+
+
+## Building
+
+### Dependencies
+
+- Nodejs `node`
+- ImageMagick `magick`
+- librsvg `rsvg-convert`
+
+### Command
+
+```sh
+./make.sh src/{projectid}/
+```
+
+
+## Copyright
+
+Copyright (c) 2025 Neruthes. All rights reserved.
+
+This repository contains cyberpersona-identifying pictures which may be copied from or inspired by their original forms.
+
+

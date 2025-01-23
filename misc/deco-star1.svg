@@ -7,11 +7,11 @@
         </g>
     </defs>
 
-    <use href="#mainstar" transform="translate(0500,2930)" />
-    <use href="#mainstar" transform="translate(0900,2930)" />
-    <use href="#mainstar" transform="translate(1300,2930)" />
-    <use href="#mainstar" transform="translate(1700,2930)" />
-    <use href="#mainstar" transform="translate(2100,2930)" />
+    <use href="#mainstar" transform="translate(0500,2905)" />
+    <use href="#mainstar" transform="translate(0900,2905)" />
+    <use href="#mainstar" transform="translate(1300,2905)" />
+    <use href="#mainstar" transform="translate(1700,2905)" />
+    <use href="#mainstar" transform="translate(2100,2905)" />
 </svg>
 <!--
 rsvg-convert misc/deco-star1.svg -o misc/deco-star1.png; realpath misc/deco-star1.png
