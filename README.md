@@ -5,6 +5,7 @@ This project uses portable aspect ratio for compatibility with the following dim
 - 15x20
 - 20x30
 - 25x35
+- 30x40
 
 
 ## Size Calculations
