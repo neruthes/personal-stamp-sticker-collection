@@ -1,0 +1,18 @@
+<!-- This is a black mask for surface decoration -->
+
+<svg viewBox="0 0 2600 3400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <path id="mainstar" d="M 0 100 C 0 50 50 0 100 0 C 50 0 0 -50 0 -100 C 0 -50 -50 0 -100 0 C -50 0 0 50 0 100 Z" stroke-linejoin="round" fill="black" stroke="black" stroke-width="15" />
+    </defs>
+
+    <use href="#mainstar" transform="translate(0700,2960)" />
+    <use href="#mainstar" transform="translate(1000,2960)" />
+    <use href="#mainstar" transform="translate(1300,2960)" />
+    <use href="#mainstar" transform="translate(1600,2960)" />
+    <use href="#mainstar" transform="translate(1900,2960)" />
+</svg>
+<!--
+rsvg-convert misc/deco-star1.svg -o misc/deco-star1.png; realpath misc/deco-star1.png
+
+rsvg-convert <(sed 's|black|#FFEE99|g' misc/deco-star1.svg) -o misc/deco-star1-gold.png
+-->
