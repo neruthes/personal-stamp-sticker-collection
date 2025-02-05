@@ -49,13 +49,6 @@ function make_frames() {
 }
 
 
-function make_final_stamp() {
-    output_png="src/$proj_id/frame/$proj_id.out_rz.png"
-    magick "src/$proj_id/frame/$proj_id.30x40.png" -bordercolor white -border 100 .tmp/rz_out_tmp.png
-    magick composite "$rz_hover_path" .tmp/rz_out_tmp.png "$output_png"
-    magick "$output_png" -crop 2400x3200+100+100 "$output_png"
-    magick -verbose "$output_png" misc/punchmask-30x40.png -compose CopyOpacity -composite "$output_png"
-}
 
 
 
@@ -65,13 +58,27 @@ function target_rouzao_30x40() {
     input_png="src/$proj_id/frame/$proj_id.30x40.png"
     output_png="src/$proj_id/frame/$proj_id.rouzao_3040.png"
 
-    magick "$input_png" -bordercolor white -border 100 "$output_png"
+    magick "$input_png" -bordercolor white -border 100 -border 100 -resize x3400 -gravity center -crop 2600x3400+0+0 +repage "$output_png"
     realpath "$output_png"
 }
 
 
 
 
+function make_final_preview() {
+    output_png="src/$proj_id/frame/$proj_id.out_rz.png"
+    # magick "src/$proj_id/frame/$proj_id.30x40.png" -bordercolor white -border 100 ".tmp/rz_out_tmp.$proj_id.png"
+    # magick composite "$rz_hover_path" ".tmp/rz_out_tmp.$proj_id.png" "$output_png"
+    magick composite "$rz_hover_path" "src/$proj_id/frame/$proj_id.rouzao_3040.png" "$output_png"
+    # magick "$output_png" -crop 2400x3200+100+100 "$output_png"
+    magick "$output_png" -bordercolor white -border 100 -resize x3200 -gravity center -crop 2400x3200+0+0 +repage "$output_png"
+    magick -verbose "$output_png" misc/punchmask-30x40.png -compose CopyOpacity -composite "$output_png"
+}
+
+
+
+
+
 make_frames
-make_final_stamp
 target_rouzao_30x40
+make_final_preview

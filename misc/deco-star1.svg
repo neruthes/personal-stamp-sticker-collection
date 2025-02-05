@@ -16,4 +16,7 @@
 <!--
 rsvg-convert misc/deco-star1.svg -o misc/deco-star1.png; realpath misc/deco-star1.png
 rsvg-convert <(sed 's|black|#FFEE99|g' misc/deco-star1.svg) -o misc/deco-star1-gold.png
+for png in misc/deco-star1.png misc/deco-star1-gold.png; do
+    magick $png -bordercolor transparent -border 100 -resize x3400 -gravity center -crop 2600x3400+0+0 +repage $png
+done
 -->
