@@ -14,8 +14,21 @@
 
 
 
+# Define hooks
+function _hook_preframing() {
+    printf ''
+}
+
+
+
+
+
+# Load config now
 # shellcheck source=src/semesse1/config.sh
 source "src/$proj_id/config.sh"
+
+
+
 
 
 
@@ -27,8 +40,7 @@ function make_frames() {
 
     [[ "$is_landscape" == y ]] && IM_PARAMS="-rotate 90" # We make sure that the output is always vertical
 
-
-    ### Now we only support topleft anchor. Will support other anchors later.
+    _hook_preframing ### When executing this hook, PWD is ./src/proj_id
     magick "$proj_id.js.png" -gravity "$IM_ANCHOR" -crop 2909x2000+0+0 $IM_PARAMS +repage -bordercolor white -border 364 "frame/$proj_id.15x20.png"
     magick "$proj_id.js.png" -gravity "$IM_ANCHOR" -crop 2667x2000+0+0 $IM_PARAMS +repage -bordercolor white -border 333 "frame/$proj_id.20x30.png"
     magick "$proj_id.js.png" -gravity "$IM_ANCHOR" -crop 3000x2000+0+0 $IM_PARAMS +repage -bordercolor white -border 250 "frame/$proj_id.25x35.png"

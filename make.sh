@@ -21,7 +21,7 @@ case $1 in
             bash utils/cook.sh
         fi
         # make_final_stamp "$proj_id"
-        [[ -e "$texpath" ]] && command -v ntex && ntex "$texpath"
+        [[ -z "$NOTEX" ]] && [[ -e "$texpath" ]] && command -v ntex && ntex "$texpath"
         ;;
 esac
 
