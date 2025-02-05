@@ -1,0 +1,21 @@
+<!-- This is a black mask for surface decoration -->
+
+<svg viewBox="0 0 2600 3400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <g id="mainstar">
+            <path transform="scale(1.6)" d="M 0 100 C 0 50 50 0 100 0 C 50 0 0 -50 0 -100 C 0 -50 -50 0 -100 0 C -50 0 0 50 0 100 Z" stroke-linejoin="round" fill="black" stroke="black" stroke-width="9" />
+        </g>
+    </defs>
+
+    <!-- <use href="#mainstar" transform="translate(0500,2905)" /> -->
+    <!-- <use href="#mainstar" transform="translate(0900,2905)" /> -->
+    <use href="#mainstar" transform="translate(1300,2905)" />
+    <use href="#mainstar" transform="translate(1700,2905)" />
+    <use href="#mainstar" transform="translate(2100,2905)" />
+    <use href="#mainstar" transform="translate(1700,2505)" />
+    <use href="#mainstar" transform="translate(2100,2505)" />
+    <use href="#mainstar" transform="translate(2100,2105)" />
+
+    <text font-family="New Heterodox Mono" font-weight="600" font-size="645" x="0" y="0"
+        fill="black" stroke="black" stroke-width="12" transform="translate(400,330) rotate(90) scale(1,1)">NERUTHES</text>
+</svg>
