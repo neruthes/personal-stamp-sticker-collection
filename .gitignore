@@ -1,3 +1,4 @@
+src/*/*.js.png
 src/*/frame/*.png
 src/*/frame/*.jpg
 _dist/
