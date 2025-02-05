@@ -70,8 +70,7 @@ function make_final_preview() {
     # magick "src/$proj_id/frame/$proj_id.30x40.png" -bordercolor white -border 100 ".tmp/rz_out_tmp.$proj_id.png"
     # magick composite "$rz_hover_path" ".tmp/rz_out_tmp.$proj_id.png" "$output_png"
     magick composite "$rz_hover_path" "src/$proj_id/frame/$proj_id.rouzao_3040.png" "$output_png"
-    # magick "$output_png" -crop 2400x3200+100+100 "$output_png"
-    magick "$output_png" -bordercolor white -border 100 -resize x3200 -gravity center -crop 2400x3200+0+0 +repage "$output_png"
+    magick "$output_png" -bordercolor white -border 34 -resize x3400 -gravity center -crop 2400x3200+0+0 +repage "$output_png"
     magick -verbose "$output_png" misc/punchmask-30x40.png -compose CopyOpacity -composite "$output_png"
 }
 
